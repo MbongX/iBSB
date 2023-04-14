@@ -19,10 +19,23 @@ namespace I_Bank___Student_Bank
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-
+   
+       
+            //CustomerRegistration cus = new CustomerRegistration();
+            this.Visible = false;
+            CustomerRegistration cus = new CustomerRegistration();
+            cus.Show();
         }
 
         private void btniBSBEmp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            iBSBManagement ibsb = new iBSBManagement();
+            ibsb.Show();
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

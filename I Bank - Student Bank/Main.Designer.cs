@@ -30,11 +30,13 @@
         {
             btnCustomer = new Button();
             btniBSBEmp = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnCustomer
             // 
-            btnCustomer.Location = new Point(74, 145);
+            btnCustomer.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCustomer.Location = new Point(74, 163);
             btnCustomer.Name = "btnCustomer";
             btnCustomer.Size = new Size(261, 117);
             btnCustomer.TabIndex = 0;
@@ -44,7 +46,8 @@
             // 
             // btniBSBEmp
             // 
-            btniBSBEmp.Location = new Point(462, 145);
+            btniBSBEmp.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btniBSBEmp.Location = new Point(462, 163);
             btniBSBEmp.Name = "btniBSBEmp";
             btniBSBEmp.Size = new Size(261, 117);
             btniBSBEmp.TabIndex = 1;
@@ -52,21 +55,35 @@
             btniBSBEmp.UseVisualStyleBackColor = true;
             btniBSBEmp.Click += btniBSBEmp_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(97, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(581, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Please select whether you are a \"Customer\" or an \"iBSB Employee\"";
+            label1.Click += label1_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(btniBSBEmp);
             Controls.Add(btnCustomer);
             Name = "Main";
             Text = "Main";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnCustomer;
         private Button btniBSBEmp;
+        private Label label1;
     }
 }
