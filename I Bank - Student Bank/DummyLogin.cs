@@ -33,20 +33,20 @@ namespace I_Bank___Student_Bank
                 {
                     iBSBManagement ibsb = new iBSBManagement();
                     MessageBox.Show("You have been logged in as Admin", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    ibsb.ShowDialog();
+                    Exit();
+                    ibsb.Show();
                 }
             }
-            else 
+            else
             {
-                MessageBox.Show("Validation of inserted data failed due to incorrect data types and/or null field", "Data Validation",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Validation of inserted data failed due to incorrect data types and/or null field", "Data Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-
-
         //custom function
+        void Exit()
+        { 
+            this.Close();
+        }
 
     }
 }

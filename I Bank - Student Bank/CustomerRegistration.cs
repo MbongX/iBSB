@@ -47,7 +47,6 @@ namespace I_Bank___Student_Bank
                     ;
                 cbxSelected = true;
             }
-
         }
         //Perform Registration
         private void btnRegister_Click(object sender, EventArgs e)
@@ -62,6 +61,10 @@ namespace I_Bank___Student_Bank
                 {
                     //perform reg here
 
+
+                    this.Close();
+                    CustomerTransaction transaction = new CustomerTransaction();
+                    transaction.ShowDialog();
                 }
                 else
                 {

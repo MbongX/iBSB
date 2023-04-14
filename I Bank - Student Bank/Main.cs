@@ -27,7 +27,9 @@ namespace I_Bank___Student_Bank
         private void btniBSBEmp_Click(object sender, EventArgs e)
         {           
             iBSBManagement ibsb = new iBSBManagement();
-            ibsb.Show();   
+            DummyLogin dummyLogin = new DummyLogin();
+            dummyLogin.ShowDialog();
+            //ibsb.Show();   
         }
 
         private void label1_Click(object sender, EventArgs e)

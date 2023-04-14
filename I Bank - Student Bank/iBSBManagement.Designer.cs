@@ -37,7 +37,7 @@
             // 
             lblReportHeading.AutoSize = true;
             lblReportHeading.Font = new Font("Segoe UI", 17F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblReportHeading.Location = new Point(272, 34);
+            lblReportHeading.Location = new Point(244, 38);
             lblReportHeading.Name = "lblReportHeading";
             lblReportHeading.Size = new Size(266, 31);
             lblReportHeading.TabIndex = 0;
