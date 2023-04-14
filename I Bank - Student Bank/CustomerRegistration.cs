@@ -1,3 +1,5 @@
+using I_Bank___Student_Bank.Modules;
+
 namespace I_Bank___Student_Bank
 {
     public partial class CustomerRegistration : Form
@@ -45,7 +47,6 @@ namespace I_Bank___Student_Bank
                     ;
                 cbxSelected = true;
             }
-
         }
         //Perform Registration
         private void btnRegister_Click(object sender, EventArgs e)
@@ -54,12 +55,16 @@ namespace I_Bank___Student_Bank
             string fName = txtLastname.Text;
             string iAmount = txtInitDeposit.Text;
 
-            if (notNull(lName) && notNull(fName) && notNull(iAmount) && cbxSelected)
+            if (Validation.notNull(lName) && Validation.notNull(fName) && Validation.notNull(iAmount) && cbxSelected)
             {
-                if (IsNumber(iAmount))
+                if (Validation.IsNumber(iAmount))
                 {
                     //perform reg here
 
+
+                    this.Close();
+                    CustomerTransaction transaction = new CustomerTransaction();
+                    transaction.ShowDialog();
                 }
                 else
                 {
@@ -74,9 +79,6 @@ namespace I_Bank___Student_Bank
                 cbAccountType.Focus();
             }
         }
-
-
-
 
         //Custom Functions
         bool IsNumber(string str)
@@ -103,8 +105,6 @@ namespace I_Bank___Student_Bank
             {
                 return true;
             }
-
-
         }
     }
 }

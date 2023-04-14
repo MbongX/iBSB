@@ -43,23 +43,26 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(53, 81);
             label1.Name = "label1";
-            label1.Size = new Size(65, 15);
+            label1.Size = new Size(68, 15);
             label1.TabIndex = 0;
             label1.Text = "Firstname :";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(53, 170);
             label2.Name = "label2";
-            label2.Size = new Size(64, 15);
+            label2.Size = new Size(66, 15);
             label2.TabIndex = 1;
             label2.Text = "Lastname :";
             // 
             // txtFirstname
             // 
+            txtFirstname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtFirstname.Location = new Point(170, 78);
             txtFirstname.Name = "txtFirstname";
             txtFirstname.Size = new Size(189, 23);
@@ -67,6 +70,7 @@
             // 
             // txtLastname
             // 
+            txtLastname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtLastname.Location = new Point(170, 167);
             txtLastname.Name = "txtLastname";
             txtLastname.Size = new Size(189, 23);
@@ -74,6 +78,7 @@
             // 
             // txtInitDeposit
             // 
+            txtInitDeposit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtInitDeposit.Location = new Point(170, 252);
             txtInitDeposit.Name = "txtInitDeposit";
             txtInitDeposit.Size = new Size(189, 23);
@@ -82,14 +87,16 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(53, 255);
             label3.Name = "label3";
-            label3.Size = new Size(88, 15);
+            label3.Size = new Size(93, 15);
             label3.TabIndex = 4;
             label3.Text = "Initial Deposit : ";
             // 
             // btnRegister
             // 
+            btnRegister.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegister.Location = new Point(473, 234);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(304, 41);
@@ -100,6 +107,7 @@
             // 
             // rtbAccountDescription
             // 
+            rtbAccountDescription.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             rtbAccountDescription.Location = new Point(473, 127);
             rtbAccountDescription.Name = "rtbAccountDescription";
             rtbAccountDescription.Size = new Size(304, 91);
@@ -109,15 +117,17 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(471, 81);
             label4.Name = "label4";
-            label4.Size = new Size(88, 15);
+            label4.Size = new Size(91, 15);
             label4.TabIndex = 8;
             label4.Text = "Account Type : ";
             // 
             // cbAccountType
             // 
             cbAccountType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbAccountType.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             cbAccountType.FormattingEnabled = true;
             cbAccountType.Location = new Point(565, 78);
             cbAccountType.Name = "cbAccountType";

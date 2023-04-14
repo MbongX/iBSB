@@ -11,7 +11,8 @@ namespace I_Bank___Student_Bank
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CustomerRegistration());
+            Application.Run(new Main());
+            
         }
     }
 }

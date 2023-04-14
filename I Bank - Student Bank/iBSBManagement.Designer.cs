@@ -28,55 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            richTextBox1 = new RichTextBox();
-            label2 = new Label();
+            lblReportHeading = new Label();
+            lblReportingFooter = new Label();
+            lvReportSummary = new ListView();
             SuspendLayout();
             // 
-            // label1
+            // lblReportHeading
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(343, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(131, 15);
-            label1.TabIndex = 0;
-            label1.Text = "[Date] + [Report Name]";
+            lblReportHeading.AutoSize = true;
+            lblReportHeading.Font = new Font("Segoe UI", 17F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            lblReportHeading.Location = new Point(244, 38);
+            lblReportHeading.Name = "lblReportHeading";
+            lblReportHeading.Size = new Size(266, 31);
+            lblReportHeading.TabIndex = 0;
+            lblReportHeading.Text = "[Date] + [Report Name]";
+            lblReportHeading.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // richTextBox1
+            // lblReportingFooter
             // 
-            richTextBox1.Location = new Point(12, 85);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(776, 297);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = "";
+            lblReportingFooter.AutoSize = true;
+            lblReportingFooter.Location = new Point(17, 401);
+            lblReportingFooter.Name = "lblReportingFooter";
+            lblReportingFooter.Size = new Size(104, 15);
+            lblReportingFooter.TabIndex = 2;
+            lblReportingFooter.Text = "[Reporting Footer]";
             // 
-            // label2
+            // lvReportSummary
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(17, 401);
-            label2.Name = "label2";
-            label2.Size = new Size(87, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Reporting label";
+            lvReportSummary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lvReportSummary.Location = new Point(28, 108);
+            lvReportSummary.Name = "lvReportSummary";
+            lvReportSummary.Size = new Size(736, 277);
+            lvReportSummary.TabIndex = 3;
+            lvReportSummary.UseCompatibleStateImageBehavior = false;
             // 
             // iBSBManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
-            Controls.Add(richTextBox1);
-            Controls.Add(label1);
+            Controls.Add(lvReportSummary);
+            Controls.Add(lblReportingFooter);
+            Controls.Add(lblReportHeading);
             Name = "iBSBManagement";
             Text = "iBSBManagement";
+            Load += iBSBManagement_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private RichTextBox richTextBox1;
-        private Label label2;
+        private Label lblReportHeading;
+        private Label lblReportingFooter;
+        private ListView lvReportSummary;
     }
 }
