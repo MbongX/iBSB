@@ -16,5 +16,15 @@ namespace I_Bank___Student_Bank
         {
             InitializeComponent();
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btniBSBEmp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

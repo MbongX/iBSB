@@ -101,5 +101,35 @@ namespace I_Bank___Student_Bank
             }
         }
         #endregion
+
+        private void labelProductName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelVersion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCopyright_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

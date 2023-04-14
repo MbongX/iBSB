@@ -90,6 +90,7 @@
             labelProductName.TabIndex = 19;
             labelProductName.Text = "Product Name";
             labelProductName.TextAlign = ContentAlignment.MiddleLeft;
+            labelProductName.Click += labelProductName_Click;
             // 
             // labelVersion
             // 
@@ -102,6 +103,7 @@
             labelVersion.TabIndex = 0;
             labelVersion.Text = "Version";
             labelVersion.TextAlign = ContentAlignment.MiddleLeft;
+            labelVersion.Click += labelVersion_Click;
             // 
             // labelCopyright
             // 
@@ -114,6 +116,7 @@
             labelCopyright.TabIndex = 21;
             labelCopyright.Text = "Copyright";
             labelCopyright.TextAlign = ContentAlignment.MiddleLeft;
+            labelCopyright.Click += labelCopyright_Click;
             // 
             // labelCompanyName
             // 
@@ -126,6 +129,7 @@
             labelCompanyName.TabIndex = 22;
             labelCompanyName.Text = "Company Name";
             labelCompanyName.TextAlign = ContentAlignment.MiddleLeft;
+            labelCompanyName.Click += labelCompanyName_Click;
             // 
             // textBoxDescription
             // 
@@ -140,6 +144,7 @@
             textBoxDescription.TabIndex = 23;
             textBoxDescription.TabStop = false;
             textBoxDescription.Text = "Description";
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // okButton
             // 
@@ -151,6 +156,7 @@
             okButton.Size = new Size(88, 27);
             okButton.TabIndex = 24;
             okButton.Text = "&OK";
+            okButton.Click += okButton_Click;
             // 
             // About
             // 

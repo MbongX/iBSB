@@ -40,6 +40,7 @@
             btnCustomer.TabIndex = 0;
             btnCustomer.Text = "Customer";
             btnCustomer.UseVisualStyleBackColor = true;
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btniBSBEmp
             // 
@@ -49,6 +50,7 @@
             btniBSBEmp.TabIndex = 1;
             btniBSBEmp.Text = "iBSB Employee";
             btniBSBEmp.UseVisualStyleBackColor = true;
+            btniBSBEmp.Click += btniBSBEmp_Click;
             // 
             // Main
             // 
