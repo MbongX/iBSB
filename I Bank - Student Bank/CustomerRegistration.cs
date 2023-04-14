@@ -63,16 +63,16 @@ namespace I_Bank___Student_Bank
                 }
                 else
                 {
-                    MessageBox.Show("Initial deposit amount must contains only numbers", "Invalid Entry Type", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Initial deposit amount must contains only numbers", "Invalid Entry Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else 
-                {
-                MessageBox.Show("All fields should not be empty","Input Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("All fields should not be empty", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtFirstname.Focus();
                 txtLastname.Focus();
                 cbAccountType.Focus();
-                }
+            }
         }
 
 
@@ -100,11 +100,11 @@ namespace I_Bank___Student_Bank
                 return false;
             }
             else
-            { 
+            {
                 return true;
             }
 
-           
+
         }
     }
 }

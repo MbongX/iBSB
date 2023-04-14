@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Main";
+            btnCustomer = new Button();
+            btniBSBEmp = new Button();
+            SuspendLayout();
+            // 
+            // btnCustomer
+            // 
+            btnCustomer.Location = new Point(74, 145);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(261, 117);
+            btnCustomer.TabIndex = 0;
+            btnCustomer.Text = "Customer";
+            btnCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btniBSBEmp
+            // 
+            btniBSBEmp.Location = new Point(462, 145);
+            btniBSBEmp.Name = "btniBSBEmp";
+            btniBSBEmp.Size = new Size(261, 117);
+            btniBSBEmp.TabIndex = 1;
+            btniBSBEmp.Text = "iBSB Employee";
+            btniBSBEmp.UseVisualStyleBackColor = true;
+            // 
+            // Main
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btniBSBEmp);
+            Controls.Add(btnCustomer);
+            Name = "Main";
+            Text = "Main";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnCustomer;
+        private Button btniBSBEmp;
     }
 }

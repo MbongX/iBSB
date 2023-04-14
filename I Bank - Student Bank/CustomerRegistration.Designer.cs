@@ -90,9 +90,9 @@
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(366, 319);
+            btnRegister.Location = new Point(473, 234);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(112, 41);
+            btnRegister.Size = new Size(304, 41);
             btnRegister.TabIndex = 6;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // 
             rtbAccountDescription.Location = new Point(473, 127);
             rtbAccountDescription.Name = "rtbAccountDescription";
-            rtbAccountDescription.Size = new Size(304, 148);
+            rtbAccountDescription.Size = new Size(304, 91);
             rtbAccountDescription.TabIndex = 7;
             rtbAccountDescription.Text = "";
             // 
@@ -129,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 400);
+            ClientSize = new Size(841, 336);
             Controls.Add(cbAccountType);
             Controls.Add(label4);
             Controls.Add(rtbAccountDescription);
