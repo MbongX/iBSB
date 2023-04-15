@@ -131,5 +131,14 @@ namespace I_Bank___Student_Bank
         {
 
         }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+            labelProductName.Text = "Product Name : " + Application.ProductName;
+            labelVersion.Text = "Product Version : " + Application.ProductVersion;
+            labelCopyright.Text = "Copyright : UCT Alumni";
+            labelCompanyName.Text = "Company : I Bank Student Bank";
+            textBoxDescription.Text = "iBSB is tailored to provide student with an affordable, streamlined banking experience experience. iBSB's immediate focus is building a relationship with student to understand their needs and goals better and empower them to take control of their money.";
+        }
     }
 }
