@@ -17,63 +17,52 @@ namespace I_Bank___Student_Bank
             InitializeComponent();
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            //CustomerRegistration cus = new CustomerRegistration();
-            CustomerRegistration cus = new CustomerRegistration();
-            cus.Show();
-        }
-
-        private void btniBSBEmp_Click(object sender, EventArgs e)
-        {
-            iBSBManagement ibsb = new iBSBManagement();
-            DummyLogin dummyLogin = new DummyLogin();
-            dummyLogin.ShowDialog();
-            //ibsb.Show();   
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private void btnCustomer_Click(object sender, EventArgs e) => openCustReg();
+        private void btniBSBEmp_Click(object sender, EventArgs e) => openiBSBLogin();
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
         //Menu ToolStrip Events
-        private void mtsRegCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mtsRegiBSBEmp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mtsLoginCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mtsLoginiBSBEmp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mtsExit_Click(object sender, EventArgs e)
-        {
-            Exit();
-        }
-
-
-
-
-
+            // Opens the customer registration form
+        private void mtsRegCustomer_Click(object sender, EventArgs e) =>btnCustomer_Click(sender, e);
+            // Opens the emp reg form
+        private void mtsRegiBSBEmp_Click(object sender, EventArgs e) => openiBSBReg();
+            // Opens the Vustomer login form
+        private void mtsLoginCustomer_Click(object sender, EventArgs e) => openCusLogin();
+            // Opens the Employer Login form
+        private void mtsLoginiBSBEmp_Click(object sender, EventArgs e) => btniBSBEmp_Click(sender, e);
+            // calls the Exit function to terminate the client/winForm
+        private void mtsExit_Click(object sender, EventArgs e) => Exit();
+   
         private void Exit()
         {
             Application.Exit();
+        }
+
+
+        //opening new forms via methods
+        private void openCustReg()
+        {
+            //this.Close();
+            CustomerRegistration cus = new CustomerRegistration();
+            cus.ShowDialog();
+        }
+        private void openiBSBReg()
+        { 
+            //need to create a form for this one 
+            iBSBRegistration iBSBRegistration = new iBSBRegistration();
+            iBSBRegistration.ShowDialog();
+        }
+        private void openCusLogin()
+        { 
+            CustomerLogin cusLogin = new CustomerLogin();
+            cusLogin.ShowDialog();
+        }
+        private void openiBSBLogin()
+        {
+            DummyLogin dummyLogin = new DummyLogin();
+            dummyLogin.ShowDialog();
         }
     }
 }

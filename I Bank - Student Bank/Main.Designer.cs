@@ -82,7 +82,7 @@
             label1.Size = new Size(581, 25);
             label1.TabIndex = 2;
             label1.Text = "Please select whether you are a \"Customer\" or an \"iBSB Employee\"";
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // menuStrip1
             // 
