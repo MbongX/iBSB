@@ -13,6 +13,9 @@ namespace I_Bank___Student_Bank
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
             
+            
+            
+            
         }
     }
 }

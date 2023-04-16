@@ -25,7 +25,7 @@ namespace I_Bank___Student_Bank
         }
 
         private void btniBSBEmp_Click(object sender, EventArgs e)
-        {           
+        {
             iBSBManagement ibsb = new iBSBManagement();
             DummyLogin dummyLogin = new DummyLogin();
             dummyLogin.ShowDialog();
@@ -35,6 +35,45 @@ namespace I_Bank___Student_Bank
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+        //Menu ToolStrip Events
+        private void mtsRegCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtsRegiBSBEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtsLoginCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtsLoginiBSBEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtsExit_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
+
+
+
+
+
+        private void Exit()
+        {
+            Application.Exit();
         }
     }
 }
