@@ -108,7 +108,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DummyLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "DummyLogin";
+            Text = "iBSB Employee Login";
             Load += DummyLogin_Load;
             ResumeLayout(false);
             PerformLayout();
