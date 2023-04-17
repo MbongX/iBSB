@@ -8,6 +8,7 @@ namespace I_Bank___Student_Bank
 
         //global vars
         bool cbxSelected = false;
+        AccountType cbxIndex;
         public CustomerRegistration()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace I_Bank___Student_Bank
                     "• You get different types of cards depending on your income bracket."
                     ;
                 cbxSelected = true;
+                cbxIndex = new AccountType();
             }
             if (cbAccountType.SelectedIndex == 1)
             {
@@ -39,6 +41,7 @@ namespace I_Bank___Student_Bank
                      "• Earn interest on the amount you save every month."
                     ;
                 cbxSelected = true;
+                cbxIndex = 1;
             }
             if (cbAccountType.SelectedIndex == 2)
             {
@@ -47,6 +50,7 @@ namespace I_Bank___Student_Bank
                     "• Earn more interest the longer you save."
                     ;
                 cbxSelected = true;
+                cbxIndex = 2;
             }
         }
         //Perform Registration
