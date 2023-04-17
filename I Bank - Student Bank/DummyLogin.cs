@@ -13,10 +13,11 @@ namespace I_Bank___Student_Bank
 {
     public partial class DummyLogin : Form
     {
-        
+
         public DummyLogin()
         {
             InitializeComponent();
+            ;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -44,9 +45,13 @@ namespace I_Bank___Student_Bank
         }
         //custom function
         void Exit()
-        { 
+        {
             this.Close();
         }
 
+        private void DummyLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

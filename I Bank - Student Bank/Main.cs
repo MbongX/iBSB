@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using I_Bank___Student_Bank.Modules;
 
 namespace I_Bank___Student_Bank
 {
@@ -16,64 +8,35 @@ namespace I_Bank___Student_Bank
         {
             InitializeComponent();
         }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            //CustomerRegistration cus = new CustomerRegistration();
-            CustomerRegistration cus = new CustomerRegistration();
-            cus.Show();
-        }
-
-        private void btniBSBEmp_Click(object sender, EventArgs e)
-        {
-            iBSBManagement ibsb = new iBSBManagement();
-            DummyLogin dummyLogin = new DummyLogin();
-            dummyLogin.ShowDialog();
-            //ibsb.Show();   
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //button event calls
+        private void btnCustomer_Click(object sender, EventArgs e) => MenuStripTool.openCustReg();
+        private void btniBSBEmp_Click(object sender, EventArgs e) => MenuStripTool.openiBSBLogin();
+        private void btnCustLogin_Click(object sender, EventArgs e) => MenuStripTool.openCusLogin();
+        private void btniBSBEmpReg_Click(object sender, EventArgs e) => MenuStripTool.openiBSBReg();
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
         //Menu ToolStrip Events
-        private void mtsRegCustomer_Click(object sender, EventArgs e)
-        {
+        // Opens the customer registration form
+        private void mtsRegCustomer_Click(object sender, EventArgs e) => btnCustomer_Click(sender, e);
 
-        }
+        // Opens the Vustomer login form
+        private void mtsLoginCustomer_Click(object sender, EventArgs e) => btnCustLogin_Click(sender, e);
+        // Opens the Employer Login form
+        private void mtsLoginiBSBEmp_Click(object sender, EventArgs e) => btniBSBEmp_Click(sender, e);
 
-        private void mtsRegiBSBEmp_Click(object sender, EventArgs e)
-        {
+        // calls the Exit function to terminate the client/winForm
+        private void mtsExit_Click(object sender, EventArgs e) => MenuStripTool.Exit();
 
-        }
+        //Edit Menustrip
 
-        private void mtsLoginCustomer_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void mtsLoginiBSBEmp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mtsExit_Click(object sender, EventArgs e)
-        {
-            Exit();
-        }
+        //About Menustrip
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e) => MenuStripTool.openAbout();
 
 
 
 
-
-        private void Exit()
-        {
-            Application.Exit();
-        }
     }
 }
