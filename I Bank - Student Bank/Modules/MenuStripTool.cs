@@ -36,5 +36,9 @@ namespace I_Bank___Student_Bank.Modules
             About about = new About();
             about.ShowDialog();
         }
+        public static void Exit()
+        {
+            Application.Exit();
+        }
     }
 }

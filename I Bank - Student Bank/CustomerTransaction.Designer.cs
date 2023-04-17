@@ -44,17 +44,15 @@
             lbStat = new ListBox();
             label1 = new Label();
             menuStrip1 = new MenuStrip();
-            menuToolStripMenuItem = new ToolStripMenuItem();
-            mtsExit = new ToolStripMenuItem();
+            TransactionMenu = new ToolStripMenuItem();
+            logOutTransactionMenu = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             themeToolStripMenuItem = new ToolStripMenuItem();
-            darkToolStripMenuItem = new ToolStripMenuItem();
-            lightToolStripMenuItem = new ToolStripMenuItem();
+            darkTransactionMenu = new ToolStripMenuItem();
+            lightTransactionMenu = new ToolStripMenuItem();
             fontToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
-            aboutUsToolStripMenuItem = new ToolStripMenuItem();
-            moreInfoToolStripMenuItem = new ToolStripMenuItem();
-            logOutToolStripMenuItem = new ToolStripMenuItem();
+            aboutUsTransactionMenu = new ToolStripMenuItem();
             gbDeposit.SuspendLayout();
             gbWithdraw.SuspendLayout();
             gbAccountStat.SuspendLayout();
@@ -115,6 +113,7 @@
             btnDepo.TabIndex = 3;
             btnDepo.Text = "Deposit";
             btnDepo.UseVisualStyleBackColor = true;
+            btnDepo.Click += btnDepo_Click;
             // 
             // txtDeposit
             // 
@@ -154,6 +153,7 @@
             btnWithd.TabIndex = 4;
             btnWithd.Text = "Withdraw";
             btnWithd.UseVisualStyleBackColor = true;
+            btnWithd.Click += btnWithd_Click;
             // 
             // txtWithdraw
             // 
@@ -204,25 +204,26 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, editToolStripMenuItem, aboutToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { TransactionMenu, editToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1131, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
-            // menuToolStripMenuItem
+            // TransactionMenu
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { logOutToolStripMenuItem, mtsExit });
-            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            menuToolStripMenuItem.Size = new Size(50, 20);
-            menuToolStripMenuItem.Text = "Menu";
+            TransactionMenu.DropDownItems.AddRange(new ToolStripItem[] { logOutTransactionMenu });
+            TransactionMenu.Name = "TransactionMenu";
+            TransactionMenu.Size = new Size(50, 20);
+            TransactionMenu.Text = "Menu";
             // 
-            // mtsExit
+            // logOutTransactionMenu
             // 
-            mtsExit.Name = "mtsExit";
-            mtsExit.Size = new Size(137, 22);
-            mtsExit.Text = "Exit";
+            logOutTransactionMenu.Name = "logOutTransactionMenu";
+            logOutTransactionMenu.Size = new Size(180, 22);
+            logOutTransactionMenu.Text = "Log out";
+            logOutTransactionMenu.Click += logOutTransactionMenu_Click;
             // 
             // editToolStripMenuItem
             // 
@@ -233,22 +234,22 @@
             // 
             // themeToolStripMenuItem
             // 
-            themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { darkToolStripMenuItem, lightToolStripMenuItem });
+            themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { darkTransactionMenu, lightTransactionMenu });
             themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             themeToolStripMenuItem.Size = new Size(110, 22);
             themeToolStripMenuItem.Text = "Theme";
             // 
-            // darkToolStripMenuItem
+            // darkTransactionMenu
             // 
-            darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(101, 22);
-            darkToolStripMenuItem.Text = "Dark";
+            darkTransactionMenu.Name = "darkTransactionMenu";
+            darkTransactionMenu.Size = new Size(101, 22);
+            darkTransactionMenu.Text = "Dark";
             // 
-            // lightToolStripMenuItem
+            // lightTransactionMenu
             // 
-            lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            lightToolStripMenuItem.Size = new Size(101, 22);
-            lightToolStripMenuItem.Text = "Light";
+            lightTransactionMenu.Name = "lightTransactionMenu";
+            lightTransactionMenu.Size = new Size(101, 22);
+            lightTransactionMenu.Text = "Light";
             // 
             // fontToolStripMenuItem
             // 
@@ -258,28 +259,17 @@
             // 
             // aboutToolStripMenuItem
             // 
-            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutUsToolStripMenuItem, moreInfoToolStripMenuItem });
+            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutUsTransactionMenu });
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             aboutToolStripMenuItem.Size = new Size(52, 20);
             aboutToolStripMenuItem.Text = "About";
             // 
-            // aboutUsToolStripMenuItem
+            // aboutUsTransactionMenu
             // 
-            aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            aboutUsToolStripMenuItem.Size = new Size(126, 22);
-            aboutUsToolStripMenuItem.Text = "About us";
-            // 
-            // moreInfoToolStripMenuItem
-            // 
-            moreInfoToolStripMenuItem.Name = "moreInfoToolStripMenuItem";
-            moreInfoToolStripMenuItem.Size = new Size(126, 22);
-            moreInfoToolStripMenuItem.Text = "More Info";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(115, 22);
-            logOutToolStripMenuItem.Text = "Log out";
+            aboutUsTransactionMenu.Name = "aboutUsTransactionMenu";
+            aboutUsTransactionMenu.Size = new Size(180, 22);
+            aboutUsTransactionMenu.Text = "About us";
+            aboutUsTransactionMenu.Click += aboutUsTransactionMenu_Click;
             // 
             // CustomerTransaction
             // 
@@ -298,6 +288,7 @@
             Name = "CustomerTransaction";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "iBSB - CustomerTransaction";
+            Load += CustomerTransaction_Load;
             gbDeposit.ResumeLayout(false);
             gbDeposit.PerformLayout();
             gbWithdraw.ResumeLayout(false);
@@ -326,16 +317,14 @@
         private ListBox lbStat;
         private Label label1;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem menuToolStripMenuItem;
-        private ToolStripMenuItem mtsExit;
+        private ToolStripMenuItem TransactionMenu;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem themeToolStripMenuItem;
-        private ToolStripMenuItem darkToolStripMenuItem;
-        private ToolStripMenuItem lightToolStripMenuItem;
+        private ToolStripMenuItem darkTransactionMenu;
+        private ToolStripMenuItem lightTransactionMenu;
         private ToolStripMenuItem fontToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
-        private ToolStripMenuItem aboutUsToolStripMenuItem;
-        private ToolStripMenuItem moreInfoToolStripMenuItem;
-        private ToolStripMenuItem logOutToolStripMenuItem;
+        private ToolStripMenuItem aboutUsTransactionMenu;
+        private ToolStripMenuItem logOutTransactionMenu;
     }
 }

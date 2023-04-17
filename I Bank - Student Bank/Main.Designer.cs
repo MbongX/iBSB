@@ -36,7 +36,6 @@
             menuToolStripMenuItem = new ToolStripMenuItem();
             registrationToolStripMenuItem = new ToolStripMenuItem();
             mtsRegCustomer = new ToolStripMenuItem();
-            mtsRegiBSBEmp = new ToolStripMenuItem();
             loginToolStripMenuItem = new ToolStripMenuItem();
             mtsLoginCustomer = new ToolStripMenuItem();
             mtsLoginiBSBEmp = new ToolStripMenuItem();
@@ -49,7 +48,6 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             aboutUsToolStripMenuItem = new ToolStripMenuItem();
             moreInfoToolStripMenuItem = new ToolStripMenuItem();
-            btniBSBEmpReg = new Button();
             btnCustLogin = new Button();
             gpCustomer = new GroupBox();
             groupBox1 = new GroupBox();
@@ -72,7 +70,7 @@
             // btniBSBEmpLogin
             // 
             btniBSBEmpLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btniBSBEmpLogin.Location = new Point(60, 130);
+            btniBSBEmpLogin.Location = new Point(56, 89);
             btniBSBEmpLogin.Name = "btniBSBEmpLogin";
             btniBSBEmpLogin.Size = new Size(220, 49);
             btniBSBEmpLogin.TabIndex = 1;
@@ -108,50 +106,43 @@
             // 
             // registrationToolStripMenuItem
             // 
-            registrationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsRegCustomer, mtsRegiBSBEmp });
+            registrationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsRegCustomer });
             registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            registrationToolStripMenuItem.Size = new Size(137, 22);
+            registrationToolStripMenuItem.Size = new Size(180, 22);
             registrationToolStripMenuItem.Text = "Registration";
             // 
             // mtsRegCustomer
             // 
             mtsRegCustomer.Name = "mtsRegCustomer";
-            mtsRegCustomer.Size = new Size(152, 22);
+            mtsRegCustomer.Size = new Size(180, 22);
             mtsRegCustomer.Text = "Customer";
             mtsRegCustomer.Click += mtsRegCustomer_Click;
-            // 
-            // mtsRegiBSBEmp
-            // 
-            mtsRegiBSBEmp.Name = "mtsRegiBSBEmp";
-            mtsRegiBSBEmp.Size = new Size(152, 22);
-            mtsRegiBSBEmp.Text = "iBSB Employee";
-            mtsRegiBSBEmp.Click += mtsRegiBSBEmp_Click;
             // 
             // loginToolStripMenuItem
             // 
             loginToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsLoginCustomer, mtsLoginiBSBEmp });
             loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new Size(137, 22);
+            loginToolStripMenuItem.Size = new Size(180, 22);
             loginToolStripMenuItem.Text = "Login";
             // 
             // mtsLoginCustomer
             // 
             mtsLoginCustomer.Name = "mtsLoginCustomer";
-            mtsLoginCustomer.Size = new Size(152, 22);
+            mtsLoginCustomer.Size = new Size(180, 22);
             mtsLoginCustomer.Text = "Customer";
             mtsLoginCustomer.Click += mtsLoginCustomer_Click;
             // 
             // mtsLoginiBSBEmp
             // 
             mtsLoginiBSBEmp.Name = "mtsLoginiBSBEmp";
-            mtsLoginiBSBEmp.Size = new Size(152, 22);
+            mtsLoginiBSBEmp.Size = new Size(180, 22);
             mtsLoginiBSBEmp.Text = "iBSB Employee";
             mtsLoginiBSBEmp.Click += mtsLoginiBSBEmp_Click;
             // 
             // mtsExit
             // 
             mtsExit.Name = "mtsExit";
-            mtsExit.Size = new Size(137, 22);
+            mtsExit.Size = new Size(180, 22);
             mtsExit.Text = "Exit";
             mtsExit.Click += mtsExit_Click;
             // 
@@ -207,17 +198,6 @@
             moreInfoToolStripMenuItem.Size = new Size(126, 22);
             moreInfoToolStripMenuItem.Text = "More Info";
             // 
-            // btniBSBEmpReg
-            // 
-            btniBSBEmpReg.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btniBSBEmpReg.Location = new Point(60, 53);
-            btniBSBEmpReg.Name = "btniBSBEmpReg";
-            btniBSBEmpReg.Size = new Size(220, 49);
-            btniBSBEmpReg.TabIndex = 5;
-            btniBSBEmpReg.Text = "Register";
-            btniBSBEmpReg.UseVisualStyleBackColor = true;
-            btniBSBEmpReg.Click += btniBSBEmpReg_Click;
-            // 
             // btnCustLogin
             // 
             btnCustLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -243,7 +223,6 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btniBSBEmpLogin);
-            groupBox1.Controls.Add(btniBSBEmpReg);
             groupBox1.Location = new Point(415, 127);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(335, 225);
@@ -285,7 +264,6 @@
         private ToolStripMenuItem menuToolStripMenuItem;
         private ToolStripMenuItem registrationToolStripMenuItem;
         private ToolStripMenuItem mtsRegCustomer;
-        private ToolStripMenuItem mtsRegiBSBEmp;
         private ToolStripMenuItem loginToolStripMenuItem;
         private ToolStripMenuItem mtsLoginCustomer;
         private ToolStripMenuItem mtsLoginiBSBEmp;
@@ -298,7 +276,6 @@
         private ToolStripMenuItem darkToolStripMenuItem;
         private ToolStripMenuItem lightToolStripMenuItem;
         private ToolStripMenuItem fontToolStripMenuItem;
-        private Button btniBSBEmpReg;
         private Button btnCustLogin;
         private GroupBox gpCustomer;
         private GroupBox groupBox1;
