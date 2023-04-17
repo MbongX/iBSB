@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DummyLogin));
             lblReportHeading = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -104,8 +105,11 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblReportHeading);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DummyLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DummyLogin";
+            Load += DummyLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

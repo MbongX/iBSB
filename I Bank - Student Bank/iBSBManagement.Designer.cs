@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iBSBManagement));
             lblReportHeading = new Label();
             lblReportingFooter = new Label();
             lvReportSummary = new ListView();
@@ -70,7 +71,9 @@
             Controls.Add(lvReportSummary);
             Controls.Add(lblReportingFooter);
             Controls.Add(lblReportHeading);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "iBSBManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "iBSBManagement";
             Load += iBSBManagement_Load;
             ResumeLayout(false);

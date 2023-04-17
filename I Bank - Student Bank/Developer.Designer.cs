@@ -1,6 +1,6 @@
 ﻿namespace I_Bank___Student_Bank
 {
-    partial class iBSBRegistration
+    partial class Developer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iBSBRegistration));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Developer));
             SuspendLayout();
             // 
-            // iBSBRegistration
+            // Developer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "iBSBRegistration";
+            Name = "Developer";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "iBSBRegistration";
+            Text = "Developer";
             ResumeLayout(false);
         }
 
