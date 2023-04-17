@@ -72,7 +72,7 @@ namespace I_Bank___Student_Bank.Service
                     transaction.OpeningAmount = account.CurrentBalance;
                     transaction.date = new DateTime().Date;
                     transaction.AccId = AccountId;
-                    transaction.TransactionTypeId = 1;
+                    transaction.TransactionTypeId = isDeposit?1:2;
                     transaction.Amount = amount;
                     account.CurrentBalance = finalAmount;
                     // Add transactio to list
@@ -89,10 +89,9 @@ namespace I_Bank___Student_Bank.Service
             return (List<Transaction>)this.transactions.Where(t => t.AccId.Equals(AccountId));
         }
 
-        public bool CreateAccount(String firstname,String lastname,int acc_type,double initialDeposit) {
-
-            return true;
-
+        void CreateAccount(String firstname,String lastname,int acc_type,double initialDeposit) {
+            AccountType account_type = (AccountType)this.accountTypes.Where(o => o.Id.Equals(acc_type));
+            this.accounts.Add(new Account( this.accounts.Count()+1 , firstname,lastname, account_type,initialDeposit,initialDeposit));
         }
 
     }
