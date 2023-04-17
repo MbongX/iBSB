@@ -1,4 +1,5 @@
 using I_Bank___Student_Bank.Modules;
+using I_Bank___Student_Bank.Service.Model;
 
 namespace I_Bank___Student_Bank
 {
@@ -54,12 +55,19 @@ namespace I_Bank___Student_Bank
             string lName = txtFirstname.Text;
             string fName = txtLastname.Text;
             string iAmount = txtInitDeposit.Text;
+            string accType = cbAccountType.SelectedItem.ToString();
+            int accNumber = 0;
 
             if (Validation.notNull(lName) && Validation.notNull(fName) && Validation.notNull(iAmount) && cbxSelected)
             {
                 if (Validation.IsNumber(iAmount))
                 {
                     //perform reg here
+                        //generate account type
+
+                    accNumber = Account.AccGen(accType);
+                    Service.Model.Account account = new Service.Model.Account(accNumber,fName,lName,accType,iAmount,00.00);
+
 
 
                     this.Close();

@@ -35,6 +35,10 @@ namespace I_Bank___Student_Bank.Service
         List<AccountType> GetAccountTypes() => this.accountTypes;
         List<TransactionType> GetTransactionTypes() => this.transactionTypes;
 
+        public static void AccNumberGen(string Name)
+        { 
+            //generate account Number
+        }
 
 
     }
