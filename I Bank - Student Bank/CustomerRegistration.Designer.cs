@@ -42,6 +42,11 @@
             lblReportHeading = new Label();
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
+            registrationToolStripMenuItem = new ToolStripMenuItem();
+            mtsRegCustomer = new ToolStripMenuItem();
+            loginToolStripMenuItem = new ToolStripMenuItem();
+            mtsLoginCustomer = new ToolStripMenuItem();
+            mtsLoginiBSBEmp = new ToolStripMenuItem();
             mtsExit = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             themeToolStripMenuItem = new ToolStripMenuItem();
@@ -51,12 +56,6 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             aboutUsToolStripMenuItem = new ToolStripMenuItem();
             moreInfoToolStripMenuItem = new ToolStripMenuItem();
-            mtsLoginCustomer = new ToolStripMenuItem();
-            mtsLoginiBSBEmp = new ToolStripMenuItem();
-            loginToolStripMenuItem = new ToolStripMenuItem();
-            mtsRegCustomer = new ToolStripMenuItem();
-            mtsRegiBSBEmp = new ToolStripMenuItem();
-            registrationToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -182,10 +181,42 @@
             menuToolStripMenuItem.Size = new Size(50, 20);
             menuToolStripMenuItem.Text = "Menu";
             // 
+            // registrationToolStripMenuItem
+            // 
+            registrationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsRegCustomer });
+            registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
+            registrationToolStripMenuItem.Size = new Size(180, 22);
+            registrationToolStripMenuItem.Text = "Registration";
+            // 
+            // mtsRegCustomer
+            // 
+            mtsRegCustomer.Name = "mtsRegCustomer";
+            mtsRegCustomer.Size = new Size(180, 22);
+            mtsRegCustomer.Text = "Customer";
+            // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsLoginCustomer, mtsLoginiBSBEmp });
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new Size(180, 22);
+            loginToolStripMenuItem.Text = "Login";
+            // 
+            // mtsLoginCustomer
+            // 
+            mtsLoginCustomer.Name = "mtsLoginCustomer";
+            mtsLoginCustomer.Size = new Size(152, 22);
+            mtsLoginCustomer.Text = "Customer";
+            // 
+            // mtsLoginiBSBEmp
+            // 
+            mtsLoginiBSBEmp.Name = "mtsLoginiBSBEmp";
+            mtsLoginiBSBEmp.Size = new Size(152, 22);
+            mtsLoginiBSBEmp.Text = "iBSB Employee";
+            // 
             // mtsExit
             // 
             mtsExit.Name = "mtsExit";
-            mtsExit.Size = new Size(137, 22);
+            mtsExit.Size = new Size(180, 22);
             mtsExit.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -238,44 +269,6 @@
             moreInfoToolStripMenuItem.Name = "moreInfoToolStripMenuItem";
             moreInfoToolStripMenuItem.Size = new Size(126, 22);
             moreInfoToolStripMenuItem.Text = "More Info";
-            // 
-            // mtsLoginCustomer
-            // 
-            mtsLoginCustomer.Name = "mtsLoginCustomer";
-            mtsLoginCustomer.Size = new Size(180, 22);
-            mtsLoginCustomer.Text = "Customer";
-            // 
-            // mtsLoginiBSBEmp
-            // 
-            mtsLoginiBSBEmp.Name = "mtsLoginiBSBEmp";
-            mtsLoginiBSBEmp.Size = new Size(180, 22);
-            mtsLoginiBSBEmp.Text = "iBSB Employee";
-            // 
-            // loginToolStripMenuItem
-            // 
-            loginToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsLoginCustomer, mtsLoginiBSBEmp });
-            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new Size(180, 22);
-            loginToolStripMenuItem.Text = "Login";
-            // 
-            // mtsRegCustomer
-            // 
-            mtsRegCustomer.Name = "mtsRegCustomer";
-            mtsRegCustomer.Size = new Size(180, 22);
-            mtsRegCustomer.Text = "Customer";
-            // 
-            // mtsRegiBSBEmp
-            // 
-            mtsRegiBSBEmp.Name = "mtsRegiBSBEmp";
-            mtsRegiBSBEmp.Size = new Size(180, 22);
-            mtsRegiBSBEmp.Text = "iBSB Employee";
-            // 
-            // registrationToolStripMenuItem
-            // 
-            registrationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mtsRegCustomer, mtsRegiBSBEmp });
-            registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            registrationToolStripMenuItem.Size = new Size(180, 22);
-            registrationToolStripMenuItem.Text = "Registration";
             // 
             // CustomerRegistration
             // 
@@ -331,7 +324,6 @@
         private ToolStripMenuItem moreInfoToolStripMenuItem;
         private ToolStripMenuItem registrationToolStripMenuItem;
         private ToolStripMenuItem mtsRegCustomer;
-        private ToolStripMenuItem mtsRegiBSBEmp;
         private ToolStripMenuItem loginToolStripMenuItem;
         private ToolStripMenuItem mtsLoginCustomer;
         private ToolStripMenuItem mtsLoginiBSBEmp;
