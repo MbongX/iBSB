@@ -96,10 +96,12 @@ namespace I_Bank___Student_Bank
         //unhiding elemets
         private void showDeposit()
         {
+            gbWithdraw.Visible= false;
             gbDeposit.Visible = true;
         }
         private void showWithdraw()
         {
+            gbDeposit.Visible = false;
             gbWithdraw.Visible = true;
         }
         private void showAccountStat()

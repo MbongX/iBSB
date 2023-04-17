@@ -79,32 +79,5 @@ namespace I_Bank___Student_Bank
                 cbAccountType.Focus();
             }
         }
-
-        //Custom Functions
-        bool IsNumber(string str)
-        {
-            foreach (char c in str)
-            {
-                if (c < '0' || c > '9')
-                    return false;
-            }
-
-            return true;
-        }
-        bool notNull(string text)
-        {
-            bool validate;
-            int charLength;
-            text = text.Trim();
-            charLength = text.Length;
-            if (charLength == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
     }
 }
