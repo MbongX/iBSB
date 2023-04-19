@@ -166,15 +166,15 @@
             ClientSize = new Size(507, 327);
             Controls.Add(tableLayoutPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "About";
             Padding = new Padding(10);
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "About";
+            Load += About_Load;
             tableLayoutPanel.ResumeLayout(false);
             tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();

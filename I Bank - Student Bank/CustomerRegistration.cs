@@ -1,4 +1,5 @@
 using I_Bank___Student_Bank.Modules;
+using I_Bank___Student_Bank.Service.Model;
 
 namespace I_Bank___Student_Bank
 {
@@ -7,6 +8,7 @@ namespace I_Bank___Student_Bank
 
         //global vars
         bool cbxSelected = false;
+        AccountType cbxIndex;
         public CustomerRegistration()
         {
             InitializeComponent();
@@ -26,26 +28,29 @@ namespace I_Bank___Student_Bank
             if (cbAccountType.SelectedIndex == 0)
             {
                 rtbAccountDescription.Text =
-                    "• Get easy access to your money for day-to-day expenses.\n" +
-                    "• You get different types of cards depending on your income bracket."
+                    "ï¿½ Get easy access to your money for day-to-day expenses.\n" +
+                    "ï¿½ You get different types of cards depending on your income bracket."
                     ;
                 cbxSelected = true;
+                //cbxIndex = new AccountType();
             }
             if (cbAccountType.SelectedIndex == 1)
             {
                 rtbAccountDescription.Text =
-                     "• Keep your savings seperate from your everyday bank accountwith a savings account.\n" +
-                     "• Earn interest on the amount you save every month."
+                     "ï¿½ Keep your savings seperate from your everyday bank accountwith a savings account.\n" +
+                     "ï¿½ Earn interest on the amount you save every month."
                     ;
                 cbxSelected = true;
+                //cbxIndex = 1;
             }
             if (cbAccountType.SelectedIndex == 2)
             {
                 rtbAccountDescription.Text =
-                    "• Savings account that you can only access when giving a certain amount of days' notice.\n" +
-                    "• Earn more interest the longer you save."
+                    "ï¿½ Savings account that you can only access when giving a certain amount of days' notice.\n" +
+                    "ï¿½ Earn more interest the longer you save."
                     ;
                 cbxSelected = true;
+                //cbxIndex = 2;
             }
         }
         //Perform Registration
@@ -54,12 +59,19 @@ namespace I_Bank___Student_Bank
             string lName = txtFirstname.Text;
             string fName = txtLastname.Text;
             string iAmount = txtInitDeposit.Text;
+            string accType = cbAccountType.SelectedItem.ToString();
+            int accNumber = 0;
 
             if (Validation.notNull(lName) && Validation.notNull(fName) && Validation.notNull(iAmount) && cbxSelected)
             {
                 if (Validation.IsNumber(iAmount))
                 {
                     //perform reg here
+                        //generate account type
+
+                    accNumber = Account.AccGen(accType);
+                    //Service.Model.Account account = new Service.Model.Account(accNumber,fName,lName,accType,iAmount,00.00);
+
 
 
                     this.Close();
@@ -77,33 +89,6 @@ namespace I_Bank___Student_Bank
                 txtFirstname.Focus();
                 txtLastname.Focus();
                 cbAccountType.Focus();
-            }
-        }
-
-        //Custom Functions
-        bool IsNumber(string str)
-        {
-            foreach (char c in str)
-            {
-                if (c < '0' || c > '9')
-                    return false;
-            }
-
-            return true;
-        }
-        bool notNull(string text)
-        {
-            bool validate;
-            int charLength;
-            text = text.Trim();
-            charLength = text.Length;
-            if (charLength == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
             }
         }
     }
