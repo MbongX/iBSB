@@ -28,29 +28,29 @@ namespace I_Bank___Student_Bank
             if (cbAccountType.SelectedIndex == 0)
             {
                 rtbAccountDescription.Text =
-                    "• Get easy access to your money for day-to-day expenses.\n" +
-                    "• You get different types of cards depending on your income bracket."
+                    "ï¿½ Get easy access to your money for day-to-day expenses.\n" +
+                    "ï¿½ You get different types of cards depending on your income bracket."
                     ;
                 cbxSelected = true;
-                cbxIndex = new AccountType();
+                //cbxIndex = new AccountType();
             }
             if (cbAccountType.SelectedIndex == 1)
             {
                 rtbAccountDescription.Text =
-                     "• Keep your savings seperate from your everyday bank accountwith a savings account.\n" +
-                     "• Earn interest on the amount you save every month."
+                     "ï¿½ Keep your savings seperate from your everyday bank accountwith a savings account.\n" +
+                     "ï¿½ Earn interest on the amount you save every month."
                     ;
                 cbxSelected = true;
-                cbxIndex = 1;
+                //cbxIndex = 1;
             }
             if (cbAccountType.SelectedIndex == 2)
             {
                 rtbAccountDescription.Text =
-                    "• Savings account that you can only access when giving a certain amount of days' notice.\n" +
-                    "• Earn more interest the longer you save."
+                    "ï¿½ Savings account that you can only access when giving a certain amount of days' notice.\n" +
+                    "ï¿½ Earn more interest the longer you save."
                     ;
                 cbxSelected = true;
-                cbxIndex = 2;
+                //cbxIndex = 2;
             }
         }
         //Perform Registration
@@ -70,7 +70,7 @@ namespace I_Bank___Student_Bank
                         //generate account type
 
                     accNumber = Account.AccGen(accType);
-                    Service.Model.Account account = new Service.Model.Account(accNumber,fName,lName,accType,iAmount,00.00);
+                    //Service.Model.Account account = new Service.Model.Account(accNumber,fName,lName,accType,iAmount,00.00);
 
 
 
