@@ -9,12 +9,13 @@ namespace I_Bank___Student_Bank.Service.Model
 {
     public class Account
     {
-        private int Id { get; set; }
-        private string FirstName { get; set; }
-        private string LastName { get; set; }
-        private AccountType AccType { get; set; }
-        private double InitialDeposit { get; set; }
-        private double CurrentBalance { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set;}
+        public AccountType AccType { get; set; }
+        public double InitialDeposit { get; set; }
+        public double CurrentBalance { get; set; }
+        public DateTime DateCreated { get; set; }
 
         public Account() { }
         public Account(int id, string firstname, string lastname, AccountType accountType, double initDeposit, double balance) {
@@ -24,7 +25,9 @@ namespace I_Bank___Student_Bank.Service.Model
             this.AccType = accountType;
             this.InitialDeposit = initDeposit;
             this.CurrentBalance = balance;
+            this.DateCreated = DateTime.Now;
         }
+        
         public static int AccGen(string type)
         {
             int min = 0, max = 0;

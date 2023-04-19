@@ -8,8 +8,8 @@ namespace I_Bank___Student_Bank.Service.Model
 {
     public class AccountType
     {
-        int Id { get; set; }
-        string Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
 
         public AccountType() { }
         public AccountType(int id, string name) {
